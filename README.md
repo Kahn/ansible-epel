@@ -1,12 +1,39 @@
-ansible-epel
-============
+Role Name
+========
 
-Ansible role installs and enables EPEL for RHEL and CentOS systems.
+Ansible role installs and enables EPEL for RHEL and CentOS systems. This will first ensure that the correct EPEL signing key is in your RPM database, and then make sure the repository file is created.
+
+Requirements
+------------
+
+* libselinux-python package must be installed for this to run properly.
+
+Role Variables
+--------------
+
+This module only uses the pre-configured variables to determine your Enterprise Linux major release and architecture. No other variables need be set.
+
+Dependencies
+------------
+
+N/A
+
+Example Playbook
+-------------------------
 
 You will want to import this role conditionally, perhaps as such:
 
 	- hosts: all
 	  roles:
-	    - { role: ansible-epel, when: ansible_os_family == 'RedHat' }
+	  - { role: ansible-epel, when: ansible_os_family == 'RedHat' }
 
-This will import the correct GPG package signing key for your release, and add the correct EPEL repositor for it.
+
+License
+-------
+
+MIT
+
+Author Information
+------------------
+
+Magnus Hedemark <magnus@yonderway.com>
