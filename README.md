@@ -25,7 +25,7 @@ You will want to import this role conditionally, perhaps as such:
 
 	- hosts: all
 	  roles:
-	  - { role: ansible-epel, when: ansible_os_family == 'RedHat' }
+	  - { role: magnus919.epel, when: ansible_os_family == 'RedHat' }
 
 
 License
