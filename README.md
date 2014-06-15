@@ -1,4 +1,4 @@
-Role Name
+ansible-epel
 ========
 
 Ansible role installs and enables EPEL for RHEL and CentOS systems. This will first ensure that the correct EPEL signing key is in your RPM database, and then make sure the repository file is created.
